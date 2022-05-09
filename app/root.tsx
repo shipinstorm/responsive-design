@@ -1,8 +1,6 @@
-import type { LinksFunction, LoaderFunction, MetaFunction } from '@remix-run/node';
-import { json } from '@remix-run/node';
+import type { LinksFunction, MetaFunction } from '@remix-run/node';
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react';
 
-import { getUser } from './session.server';
 import tailwindStylesheetUrl from './styles/tailwind.css';
 
 export const links: LinksFunction = () => {
@@ -14,16 +12,6 @@ export const meta: MetaFunction = () => ({
     title: 'Cafés',
     viewport: 'width=device-width,initial-scale=1',
 });
-
-type LoaderData = {
-    user: Awaited<ReturnType<typeof getUser>>;
-};
-
-export const loader: LoaderFunction = async ({ request }) => {
-    return json<LoaderData>({
-        user: await getUser(request),
-    });
-};
 
 export default function App() {
     return (
