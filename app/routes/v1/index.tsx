@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 
-import type { IV1Card} from '~/routes/v1/V1Card';
+import type { IV1Card } from '~/routes/v1/V1Card';
 import { V1Card } from '~/routes/v1/V1Card';
 
 import coffee1 from '../../assets/images/coffee-1.jpeg';

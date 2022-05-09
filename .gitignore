@@ -3,13 +3,12 @@ package-lock.json
 
 /build
 /public/build
+/.cache
+/.netlify
 .env
-
-/cypress/screenshots
-/cypress/videos
-/prisma/data.db
-/prisma/data.db-journal
 
 /app/styles/tailwind.css
 
 /.idea
+
+.DS_Store
