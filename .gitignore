@@ -4,7 +4,7 @@ package-lock.json
 /build
 /public/build
 /.cache
-/.netlify
+/.netlify/functions-internal
 .env
 
 /app/styles/tailwind.css
